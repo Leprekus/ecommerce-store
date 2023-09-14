@@ -29,6 +29,8 @@ export interface Product {
     createdAt: Date;
     updatedAt: Date;
     category: Category;
+    size: Size;
+    color: Color;
     images: Image[]
 }
 

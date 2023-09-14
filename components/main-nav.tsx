@@ -11,10 +11,11 @@ interface MainNavProps {
 export default function MainNav({ data }: MainNavProps) {
     const pathname = usePathname()
     const routes = data.map((route) => ({
-        href: `/caregory/${route.id}`,
+        href: `/category/${route.id}`,
         label: route.name,
         active: pathname === `/category/${route.id}`
     }))
+    console.log({ routes })
   return (
     <nav
         className='
@@ -33,10 +34,11 @@ export default function MainNav({ data }: MainNavProps) {
                 `text-sm 
                 font-medium 
                 transition-colors 
-                hover:text-black`,
+                hover:text-black
+                `,
                 route.active ? 'text-black' : 'text-neutral-500'
             )}
-        ></Link>
+        >{ route.label }</Link>
        ))}
     </nav>
   )

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Container from './ui/container';
 import MainNav from './main-nav';
 import NavbarActions from './navbar-actions';
-import { getCategories } from '@/actions/categories.actions copy';
+import { getCategories } from '@/actions/categories.actions';
 
 export const revalidate = 0
 

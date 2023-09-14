@@ -20,5 +20,12 @@ export const getProducts = async(query: Query): Promise<Product[]> => {
         }
     })
     const res = await fetch(url)
+    const data = await res.json()
+    console.log({ data })
+    return data
+}
+export const getProduct = async(id: string): Promise<Product> => {
+
+    const res = await fetch(`${URL}/${id}`)
     return await res.json()
 }
