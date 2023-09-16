@@ -24,7 +24,8 @@ export default function Billboard({ data }: BillboardProps) {
                     flex-col 
                     justify-center 
                     text-center 
-                    gap-y-8'
+                    gap-y-8
+                    '
             >
                 <div 
                     className='
@@ -34,6 +35,11 @@ export default function Billboard({ data }: BillboardProps) {
                         lg:text-6xl
                         sm:max-w-xl
                         max-w-xs
+                        w-fit
+                        mx-auto
+                        p-4
+                        bg-white/20
+                        rounded-md
                     ' 
                 >
                     { data.label }
