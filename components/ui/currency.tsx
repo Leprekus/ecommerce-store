@@ -1,6 +1,6 @@
 'use client'
 
-import useIsMounted from '@/hooks/useIsMounted'
+import useIsMounted from '@/hooks/use-is-mounted'
 
 export const priceFormatter = new Intl.NumberFormat('en-US', {
     style: 'currency',

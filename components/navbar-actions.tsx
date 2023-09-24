@@ -1,11 +1,13 @@
 'use client'
 
-import useIsMounted from '@/hooks/useIsMounted'
-import Button from './ui/Button'
+import useIsMounted from '@/hooks/use-is-mounted'
 import { ShoppingBag } from 'lucide-react'
+import Button from './ui/Button'
+import useCart from '@/hooks/use-cart'
 export default function NavbarActions() {
 
   const isMounted = useIsMounted()
+  const cart = useCart()
   
   if(!isMounted) return null
   
@@ -17,7 +19,7 @@ export default function NavbarActions() {
               color='white'
             />
             <span className='ml-2 text-sm font-medium text-white'>
-              0
+              { cart.items.length }
             </span>
         </Button>
     </div>

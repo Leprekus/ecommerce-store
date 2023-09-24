@@ -33,7 +33,7 @@ export default function Info({ data }: InfoProps) {
                     Color
                 </h3>
                 
-                <div className='h-6 w-6 rounded-full border border-gray-600'
+                <div className='h-6 w-6 rounded-full border-2 border-zinc-200'
                 style={{ backgroundColor: data.color.value }} 
                 />
                     
