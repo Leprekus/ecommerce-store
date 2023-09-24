@@ -1,7 +1,10 @@
+'use client'
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import { Product } from '@/types';
-import toast from 'react-hot-toast';
+import toast, { Toast } from 'react-hot-toast';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 interface CartStore {
     items: Product[],
@@ -23,7 +26,20 @@ const useCart = create(
             toast('Item already in cart') :
             (
                 set({ items: [ ...currentItems, data ]}),
-                toast('Added to cart', { icon: '🛒' })
+                toast('Added to Cart', { icon: 
+                <Link 
+                    style={{ color: 'rgb(59 130 246)' }}
+                    className='
+                    font-xs 
+                    font-sans 
+                    font-bold 
+                    rounded-md
+                    p-2
+                    '
+                    href='/cart'
+                >
+                        View
+                    </Link> })
             )
         },
         removeItem: (id: string) => {
