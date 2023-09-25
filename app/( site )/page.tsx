@@ -7,7 +7,7 @@ import ProductList from '@/components/product-list';
 export const revalidate = 0
 export default async function HomePage() {
   const products = await getProducts({ isFeatured: true })
-  const billboard = await getBillboard('dad7fa5b-be4f-4607-b5d5-19e0d9bec29f')
+  const billboard = await getBillboard('b8dba178-7f9f-40a1-b363-3abbbd55302c')
   return (
     <Container>
       <div className='space-y-10 pb-10'>
