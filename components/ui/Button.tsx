@@ -11,6 +11,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
 }, ref) => (
     <button
         ref={ref}
+        disabled={disabled}
         { ...props }
         className={cn(`
             w-auto
