@@ -38,8 +38,8 @@ export default function Billboard({ data }: BillboardProps) {
                         w-fit
                         mx-auto
                         p-4
-                        bg-white/20
-                        rounded-md
+                        text-white
+                        
                     ' 
                 >
                     { data.label }
