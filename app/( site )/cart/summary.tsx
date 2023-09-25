@@ -31,7 +31,7 @@ export default function Summary() {
             
         })
         const json = await res.json()
-        window.location = json.data.url
+        window.location = json.url
     }
   return (
     <div className='
